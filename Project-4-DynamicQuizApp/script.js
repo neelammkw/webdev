@@ -43,7 +43,7 @@ const quizData = [
 ];
 
 // Example of accessing a question
-console.log(quizData[5].question); // Output: "In which year did the Titanic sink?"
+// console.log(quizData[5].question); // Output: "In which year did the Titanic sink?"
 
 const answerEls = document.querySelectorAll(".answer");
 const [questionElm, option_1, option_2, option_3, option_4] =
@@ -60,7 +60,7 @@ let score = 0;
 const loadQuestion = () => {
   if (currentQuiz < quizData.length) {
     const { question, options } = quizData[currentQuiz];
-    console.log(question);
+    // console.log(question);
 
     questionElm.innerText = question;
     options.forEach((curOption, index) => {
@@ -128,19 +128,4 @@ submitBtn.addEventListener('click', () => {
     }
     }
 });
-
-// if (currentQuiz < quizData.length - 1) {
-//     // Load the next question
-//     currentQuiz++;
-//     deselectedAnswer();
-//     loadQuestion();
-// } else {
-//     // End the quiz, display score, or perform other actions
-//     const resultContainer = document.getElementById("resultContainer");
-//     resultContainer.innerHTML = `<div class="result">
-//         <h2>Your Score: ${score} / ${quizData.length} Correct Answers</h2>
-//         <p>Congratulations on completing the quiz!</p>
-//         <button class="reload-button" onclick="location.reload()">Play Again</button>
-//     </div>`;
-// }
 
